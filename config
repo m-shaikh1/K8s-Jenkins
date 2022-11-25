@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Config
+preferences: {}
+
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakN>
+    server: https://5a392b80-aa26-4b9d-8d1d-8926520e04b2.ap-west-2.linodelke.ne>
+  name: lke81748
+
+users:
+- name: lke81748-admin
+  user:
+    as-user-extra: {}
+    token: eyJhbGciOiJSUzI1NiIsImtpZCI6InM3bFI4bkNFZ2h0SVBEX01ZLW9WVThqZzMxMU8w>
+
+contexts:
+- context:
+    cluster: lke81748
+    namespace: default
+    user: lke81748-admin
+  name: lke81748-ctx
+
+current-context: lke81748-ctx
